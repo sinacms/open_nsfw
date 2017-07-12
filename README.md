@@ -38,7 +38,7 @@ Install Docker Engine
 
 Build a caffe docker image (CPU) 
 ```
-docker build -t caffe:cpu https://raw.githubusercontent.com/BVLC/caffe/master/docker/standalone/cpu/Dockerfile
+docker build -t caffe:cpu https://raw.githubusercontent.com/BVLC/caffe/master/docker/cpu/Dockerfile
 ```
 
 Check the caffe installation
@@ -50,7 +50,8 @@ caffe version 1.0.0-rc3
 Run the docker image with a volume mapped to your `open_nsfw` repository. Your `test_image.jpg` should be located in this same directory.
 ```
 cd open_nsfw
-docker run --volume=$(pwd):/workspace caffe:cpu \
+docker run --volume=$(pwd):/workspace caffe:cpu 
+in docker:
 python ./classify_nsfw.py \
 --model_def nsfw_model/deploy.prototxt \
 --pretrained_model nsfw_model/resnet_50_1by2_nsfw.caffemodel \
