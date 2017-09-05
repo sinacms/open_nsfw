@@ -36,9 +36,13 @@ Install Docker Engine
 - [Mac OSX Installation](https://docs.docker.com/v1.8/installation/mac/)
 - [Ubuntu Installation](https://docs.docker.com/v1.8/installation/ubuntulinux/)
 
-Build a caffe docker image (CPU) 
+Build a caffe docker image 
 ```
+#CPU
 docker build -t caffe:cpu https://raw.githubusercontent.com/BVLC/caffe/master/docker/cpu/Dockerfile
+
+#GPU
+docker build -t caffe:gpu https://raw.githubusercontent.com/BVLC/caffe/master/docker/gpu/Dockerfile
 ```
 
 Check the caffe installation
